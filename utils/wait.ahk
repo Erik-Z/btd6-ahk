@@ -148,9 +148,7 @@ WaitForVictoryOrDefeat() {
             LogMsg("Defeat on round " currentRound)
             break
         }
-        CheckInstaMonkey()
-        CheckLevelUp()
-        CheckInGameMsg()
+        CheckInterrupt()
         UpdateRound()
         Sleep(2000)
     }
@@ -180,8 +178,7 @@ WaitForUpgrade(path) {
             LogMsg("Found victory instead of upgrade " path " on " toweropen)
             break
         }
-        CheckLevelUp()
-        CheckInGameMsg()
+        CheckInterrupt()
         UpdateRound()
     }
 }
